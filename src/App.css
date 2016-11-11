@@ -1,13 +1,49 @@
 .app {
-  text-align: center;
   background-image: url('../public/wittenberg.png');
   background-position: bottom center;
   background-repeat: repeat-x;
   background-size: 1000px;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
+}
+
+.container {
+  left: 50%;
+  top: 35%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.neptune {
+  background-color: rgba(123, 182, 184, 1);
+}
+
+.b--neptune {
+  border-color: rgba(123, 182, 184, 1);
+}
+
+.bouquet {
+  background-color: rgba(170, 132, 163, 1);
+}
+
+.b--bouquet {
+  border-color: rgba(170, 132, 163, 1);
+}
+
+.amber {
+  background-color: rgba(110, 57, 34, 1);
+}
+
+.b--amber {
+  border-color: rgba(110, 57, 34, 1);
+}
+
+.highland {
+  background-color: rgba(117, 149, 84, 1);
+}
+
+.b--highland {
+  border-color: rgba(117, 149, 84, 1);
+}
+
+.b--solid {
+  border-style: solid;
 }

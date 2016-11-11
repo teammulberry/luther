@@ -47,3 +47,7 @@
 .b--solid {
   border-style: solid;
 }
+
+.top-1-4 {
+  top: 1.4rem;
+}

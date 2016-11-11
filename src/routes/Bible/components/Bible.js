@@ -33,13 +33,19 @@ class Bible extends Component {
   }
   render() {
     const {passages} = this.state
+    let passageCount = Object.keys(passages).length
+    for (let passage in passages) {
+      if (passages[passage].active) {
+        passageCount -= 1
+      }
+    }
     return (
       <div>
         <h2>What does the Bible say?</h2>
         <p>As Martin Luther studied God's word and grew in faith, he learned to use Scripture to help with situations he faced.</p>
         <p><strong>You can do the same in your life!</strong></p>
         <div className='pa2 f6 tl'>
-          <ul className={'list fl w-100 pl0 pr0 pr3-ns' + (Object.keys(passages).length ? ' w-50-ns' : '')}>
+          <ul className={'list fl w-100 pl0 pr0 pr3-ns' + (passageCount ? ' w-50-ns' : '')}>
             <li className='b--amber b--solid bw1 db w-100 br2 pa2 mv2 bg-white'>A friend asks you to spend the weekend at his house. Your parents don't know that he's allowed to roam the street and do almost anything he pleases. {passages['d'].active ? <b><br />{passages['d'].text}</b> : ''}</li>
             <li className='b--amber b--solid bw1 db w-100 br2 pa2 mv2 bg-white'>While at a park during your summer rock climbing class, your instructor says that the rock formations are at least a billion years old. {passages['a'].active ? <b><br />{passages['a'].text}</b> : ''}</li>
             <li className='b--amber b--solid bw1 db w-100 br2 pa2 mv2 bg-white'>A classmate bugs you to look at magazines with photos of nude people in them. {passages['e'].active ? <b><br />{passages['e'].text}</b> : ''}</li>
@@ -52,7 +58,7 @@ class Bible extends Component {
             )}
           </ul>
         </div>
-        <div className='absolute top-1 left-1'>
+        <div className='absolute top-1-4 left-1'>
           <Link
             to='/'
             className='amber pv1 ph2 w-100 br2 white no-underline'>

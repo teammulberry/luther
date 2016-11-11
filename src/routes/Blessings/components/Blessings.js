@@ -64,7 +64,7 @@ class Blessings extends Component {
             )}
           </div>
         </div>
-        <div className='absolute top-1 left-1'>
+        <div className='absolute top-1-4 left-1'>
           <Link
             to='/'
             className='bouquet pv1 ph2 w-100 br2 white no-underline'>

@@ -22,6 +22,7 @@
     "css": "tachyons src/css/app.css > src/index.css --minify",
     "prestart": "npm run css",
     "prebuild": "npm run css",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "surge": "npm build && surge -p build --domain lutherproject.surge.sh"
   }
 }

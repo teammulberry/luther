@@ -1,8 +1,9 @@
 .app {
-  background-image: url('../public/wittenberg.png');
+  background-image: url('../public/wartburg.jpg');
   background-position: bottom center;
+  background-attachment: fixed;
   background-repeat: repeat-x;
-  background-size: 1000px;
+  background-size: 1300px;
 }
 
 .container {
@@ -50,4 +51,48 @@
 
 .top-1-4 {
   top: 1.4rem;
+}
+
+.lh-double {
+  line-height: 2;
+}
+
+.dropzone {
+  border-bottom: 1px solid black;
+  min-width: 50px;
+  min-height: 25px;
+  display: inline-block;
+}
+
+.dropped {
+  font-weight: bold;
+  padding-top: 6px;
+  border-top: 1px solid rgba(109, 57, 37, 1);
+  margin-top: 6px;
+}
+
+/* dragula styles */
+
+.gu-mirror {
+  font-size: .875rem !important;
+  position: fixed !important;
+  margin: 0 !important;
+  z-index: 9999 !important;
+  opacity: 0.8;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  filter: alpha(opacity=80);
+}
+.gu-hide {
+  display: none !important;
+}
+.gu-unselectable {
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+}
+.gu-transit {
+  opacity: 0.2;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+  filter: alpha(opacity=20);
 }

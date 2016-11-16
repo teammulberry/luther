@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
+import Dragula from 'react-dragula'
 
 class LutherLutherans extends Component {
   constructor(props) {
     super(props)
-
     this.state = {
       words: {
         catechisms: {
@@ -51,12 +51,22 @@ class LutherLutherans extends Component {
         }
       }
     }
-    this.handleClick = (id) => {
-      let newWords = {}
-      newWords = this.state.words
-      newWords[id].active = true
-      this.setState({words: newWords})
-    }
+  }
+  componentDidMount () {
+    const dropzonesObj = document.getElementsByClassName('dropzone')
+    let dropzones = Array.prototype.slice.call(dropzonesObj)
+    dropzones.push(document.getElementById('words'))
+    Dragula({containers: dropzones})
+    .on('drop', function (el, target, source) {
+      if (el.innerHTML === target.id) {
+        let drop = document.createElement('b')
+        drop.innerHTML = target.id
+        target.parentNode.insertBefore(drop, target.nextSibling)
+        target.remove()
+      } else {
+        source.append(el)
+      }
+    })
   }
   render() {
     const {words} = this.state
@@ -64,11 +74,11 @@ class LutherLutherans extends Component {
       <div>
         <h2>Luther & Lutherans</h2>
         <div className='pa2 f6 tl'>
-          <p className='fl w-100 lh-copy b--highland b--solid bw1 br2 pa3 ma1 bg-white'>The church of Martin Luther's day taught that good (1) {words['works'].active ? (<b>works</b>) : '________'} were necessary to gain God's favor and salvation. Martin knew he was sinful and grew up (2) {words['fearing'].active ? (<b>fearing</b>) : '________'} God. Only as he studied God's Word did he learn that Jesus did the (3) {words['complete'].active ? (<b>complete</b>) : '________'} job of saving people from their sins and from (4) {words['punishment'].active ? (<b>punishment</b>) : '________'} in hell. Jesus was (5) {words['perfect'].active ? (<b>perfect</b>) : '________'} in our place, died on the cross to suffer the punishment we (6) {words['deserve'].active ? (<b>deserve</b>) : '________'}, and (7) {words['rose'].active ? (<b>rose</b>) : '________'} from the dead. Good works do not (8) {words['save'].active ? (<b>save</b>) : '________'}. They are done to show (9) {words['thanks'].active ? (<b>thanks</b>) : '________'} to God for saving us.<br />
-          So the others would learn God's saving truths, Martin Luther (10) {words['translated'].active ? (<b>translated</b>) : '________'} the Bible into German. He wrote (11) {words['catechisms'].active ? (<b>catechisms</b>) : '________'} to help adults teach and children learn God's truths in simple straight forward ways. To help people be active participants in (12) {words['worship'].active ? (<b>worship</b>) : '________'}, Luther wrote (13) {words['hymns'].active ? (<b>hymns</b>) : '________'} and found and adapted others that could be used to praise God and to (14) {words['declare'].active ? (<b>declare</b>) : '________'} his truths to others.</p>
-          <ul className='list tc pa0'>
+          <p className='fl w-100 lh-double b--highland b--solid bw1 br2 pa3 ma1 bg-white'>The church of Martin Luther's day taught that good (1) <span id='works' className='dropzone'></span> were necessary to gain God's favor and salvation. Martin knew he was sinful and grew up (2) <span id='fearing' className='dropzone'></span> God. Only as he studied God's Word did he learn that Jesus did the (3) <span id='complete' className='dropzone'></span> job of saving people from their sins and from (4) <span id='punishment' className='dropzone'></span> in hell. Jesus was (5) <span id='perfect' className='dropzone'></span> in our place, died on the cross to suffer the punishment we (6) <span id='deserve' className='dropzone'></span>, and (7) <span id='rose' className='dropzone'></span> from the dead. Good works do not (8) <span id='save' className='dropzone'></span>. They are done to show (9) <span id='thanks' className='dropzone'></span> to God for saving us.<br />
+          So the others would learn God's saving truths, Martin Luther (10) <span id='translated' className='dropzone'></span> the Bible into German. He wrote (11) <span id='catechisms' className='dropzone'></span> to help adults teach and children learn God's truths in simple straight forward ways. To help people be active participants in (12) <span id='worship' className='dropzone'></span>, Luther wrote (13) <span id='hymns' className='dropzone'></span> and found and adapted others that could be used to praise God and to (14) <span id='declare' className='dropzone'></span> his truths to others.</p>
+          <ul id='words' className='list tc pa0'>
             {Object.keys(words).map((id, i) =>
-              <li className={'b--highland b--solid bw1 br2 pa2 ma1 bg-white pointer grow' + (words[id].active ? ' dn' : ' dib')} onClick={() => this.handleClick(id)} key={i}>{words[id].word}</li>
+              <li className={'b--highland b--solid bw1 br2 pa2 ma1 bg-white pointer' + (words[id].active ? ' dn' : ' dib')} key={i}>{words[id].word}</li>
             )}
           </ul>
         </div>

@@ -66,6 +66,12 @@ class LutherLearned extends Component {
       } else {
         source.append(el)
       }
+      if (source.getElementsByTagName('li').length <= 0) {
+        let success = document.createElement('h2')
+        success.setAttribute('class', 'neptune white pv3 ph4 dib br2')
+        success.innerHTML = 'Great job!'
+        document.getElementById('success').append(success)
+      }
     })
   }
   render() {
@@ -75,6 +81,7 @@ class LutherLearned extends Component {
       <div>
         <h2>Luther Learned</h2>
         <p>Finish each sentence. Drag a word from the right and drop it in the correct blank space.</p>
+        <div id='success' />
         <div className='pa2 f6'>
           <div className='fl w-100 w-75-ns pr0 pr2-ns'>
             <ul className='list b--neptune ba bw1 br2 pa4 bg-white tl lh-copy'>

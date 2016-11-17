@@ -9,7 +9,7 @@ import LutherLutherans from './routes/LutherLutherans'
 import './index.css'
 
 const rootRoute = {
-  childRoutes: [ {
+  childRoutes: [{
     path: '/',
     component: App,
     childRoutes: [
@@ -18,7 +18,7 @@ const rootRoute = {
       Bible,
       LutherLutherans
     ]
-  } ]
+  }]
 }
 
 render((

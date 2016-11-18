@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router'
+import CloseButton from '../../../components/CloseButton'
 import Dragula from 'react-dragula'
 
 class LutherLearned extends Component {
@@ -100,13 +100,7 @@ class LutherLearned extends Component {
             </div>
           </div>
         </div>
-        <div className='absolute top-1-4 left-1'>
-          <Link
-            to='/'
-            className='neptune pv1 ph2 w-100 br2 white no-underline'>
-            Home
-          </Link>
-        </div>
+        <CloseButton color='neptune' />
       </div>
     )
   }

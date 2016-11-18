@@ -79,6 +79,7 @@ class LutherLutherans extends Component {
     return (
       <div>
         <h2>Luther & Lutherans</h2>
+        <p>Drag words from the word bank on the bottom to complete the paragraph.</p>
         <div id='success' />
         <div className='pa2 f6 tl'>
           <p className='fl w-100 lh-double b--highland b--solid bw1 br2 pa3 ma1 bg-white'>The church of Martin Luther's day taught that good (1) <span id='works' className='dropzone'></span> were necessary to gain God's favor and salvation. Martin knew he was sinful and grew up (2) <span id='fearing' className='dropzone'></span> God. Only as he studied God's Word did he learn that Jesus did the (3) <span id='complete' className='dropzone'></span> job of saving people from their sins and from (4) <span id='punishment' className='dropzone'></span> in hell. Jesus was (5) <span id='perfect' className='dropzone'></span> in our place, died on the cross to suffer the punishment we (6) <span id='deserve' className='dropzone'></span>, and (7) <span id='rose' className='dropzone'></span> from the dead. Good works do not (8) <span id='save' className='dropzone'></span>. They are done to show (9) <span id='thanks' className='dropzone'></span> to God for saving us.<br />

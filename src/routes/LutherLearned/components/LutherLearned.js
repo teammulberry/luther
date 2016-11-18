@@ -91,11 +91,13 @@ class LutherLearned extends Component {
             </ul>
           </div>
           <div className='fl w-100 w-25-ns pl0 pl2-ns'>
-            <ul id='words' className='list b--neptune ba bw1 br2 pa4 bg-white lh-double'>
-              {wordsShuffle.map((id, i) =>
-                <li className={'grow pointer db' + (words[id].active ? ' dn' : '')} key={i}>{words[id].word}</li>
-              )}
-            </ul>
+            <div className='b--neptune ba bw1 br2 pv3 bg-white'>
+              <ul id='words' className='list lh-double pa0 w3 center'>
+                {wordsShuffle.map((id, i) =>
+                  <li className={'grow pointer dib' + (words[id].active ? ' dn' : '')} key={i}>{words[id].word}</li>
+                )}
+              </ul>
+            </div>
           </div>
         </div>
         <div className='absolute top-1-4 left-1'>

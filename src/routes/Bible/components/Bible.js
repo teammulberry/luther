@@ -83,8 +83,7 @@ class Bible extends Component {
     return (
       <div>
         <h2>What does the Bible say?</h2>
-        <p>As Martin Luther studied God's word and grew in faith, he learned to use Scripture to help with situations he faced. Drag the passage from the right to situation on the left.</p>
-        <p><strong>You can do the same in your life!</strong></p>
+        <p>As Martin Luther studied God's word and grew in faith, he learned to use Scripture to help with situations he faced. <strong>You can do the same in your life!</strong> Drag the passage from the right to match the situation on the left.</p>
         <div id='success' />
         <div className='pa2 f6 tl'>
           <ul className='list fl w-100 pl0 pr0 pr3-ns w-50-ns'>

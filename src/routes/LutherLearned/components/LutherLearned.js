@@ -62,7 +62,7 @@ class LutherLearned extends Component {
         let drop = document.createElement('b')
         drop.innerHTML = target.id
         target.parentNode.insertBefore(drop, target.nextSibling)
-        target.remove()
+        target.parentNode.removeChild(target)
       } else {
         source.append(el)
       }

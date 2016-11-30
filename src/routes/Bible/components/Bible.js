@@ -65,7 +65,7 @@ class Bible extends Component {
         drop.innerHTML = passages[el.id].text
         newTarget.append(drop)
         target.parentNode.insertBefore(newTarget, target.nextSibling)
-        target.remove()
+        target.parentNode.removeChild(target)
       } else {
         source.append(el)
       }

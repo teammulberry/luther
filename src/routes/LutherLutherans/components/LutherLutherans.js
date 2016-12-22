@@ -64,13 +64,13 @@ class LutherLutherans extends Component {
         target.parentNode.insertBefore(drop, target.nextSibling)
         target.parentNode.removeChild(target)
       } else {
-        source.append(el)
+        source.appendChild(el)
       }
       if (source.getElementsByTagName('li').length <= 0) {
         let success = document.createElement('h2')
         success.setAttribute('class', 'highland white pv3 ph4 dib br2')
         success.innerHTML = 'Great job!'
-        document.getElementById('success').append(success)
+        document.getElementById('success').appendChild(success)
       }
     })
   }

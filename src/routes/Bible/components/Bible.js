@@ -63,17 +63,17 @@ class Bible extends Component {
         let drop = document.createElement('li')
         drop.classList.add('dropped')
         drop.innerHTML = passages[el.id].text
-        newTarget.append(drop)
+        newTarget.appendChild(drop)
         target.parentNode.insertBefore(newTarget, target.nextSibling)
         target.parentNode.removeChild(target)
       } else {
-        source.append(el)
+        source.appendChild(el)
       }
       if (source.getElementsByTagName('li').length <= 0) {
         let success = document.createElement('h2')
         success.setAttribute('class', 'amber white pv3 ph4 dib br2')
         success.innerHTML = 'Great job!'
-        document.getElementById('success').append(success)
+        document.getElementById('success').appendChild(success)
       }
     })
   }

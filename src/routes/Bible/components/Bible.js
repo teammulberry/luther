@@ -9,7 +9,7 @@ class Bible extends Component {
       passages: {
         a: {
           problem: 'While at a park during your summer rock climbing class, your instructor says that the rock formations are at least a billion years old.',
-          text: 'A. Exodus 20:11a: In six days the Lord made the heaves and the earth, the sea, and all that is in them.'
+          text: 'A. Exodus 20:11a: In six days the Lord made the heavens and the earth, the sea, and all that is in them.'
         },
         b: {
           problem: 'A church friend says, "When I turn 18, I\'m not going to church every week. I\'ll just go once in a while. It\'s not like I don\'t have faith."',

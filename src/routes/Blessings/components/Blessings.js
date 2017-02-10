@@ -59,7 +59,7 @@ class Blessings extends Component {
           <div>
             {Object.keys(lutherBlessings).map((id, i) =>
               <div className='fl w-100 w-25-ns pa2' key={i}>
-                <div className={'b--bouquet b--solid br2 bw1 w-100 pa2 pointer grow' + (lutherBlessings[id].active ? ' bg-white' : ' bouquet')} onClick={() => this.handleClick(id)}>
+                <div className={'b--bouquet b--solid br2 bw1 w-100 pa2 pointer grow' + (lutherBlessings[id].active ? ' bg-white' : ' bg-bouquet')} onClick={() => this.handleClick(id)}>
                   <span style={{visibility: lutherBlessings[id].active ? 'visible' : 'hidden'}}>
                     <img
                       src={`/svg/${id}.svg`}
@@ -72,7 +72,7 @@ class Blessings extends Component {
             )}
           </div>
         </div>
-        <CloseButton color='bouquet' />
+        <CloseButton color='bg-bouquet' />
       </div>
     )
   }

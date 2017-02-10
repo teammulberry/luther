@@ -68,7 +68,7 @@ class LutherLutherans extends Component {
       }
       if (source.getElementsByTagName('li').length <= 0) {
         let success = document.createElement('h2')
-        success.setAttribute('class', 'highland white pv3 ph4 dib br2')
+        success.setAttribute('class', 'bg-highland white pv3 ph4 dib br2')
         success.innerHTML = 'Great job!'
         document.getElementById('success').appendChild(success)
       }
@@ -90,7 +90,7 @@ class LutherLutherans extends Component {
             )}
           </ul>
         </div>
-        <CloseButton color='highland' />
+        <CloseButton color='bg-highland' />
       </div>
     )
   }

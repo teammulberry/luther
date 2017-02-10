@@ -14,33 +14,32 @@
 }
 
 .neptune {
+  color: rgba(123, 182, 184, 1);
+}
+.bg-neptune {
   background-color: rgba(123, 182, 184, 1);
 }
-
 .b--neptune {
   border-color: rgba(123, 182, 184, 1);
 }
 
-.bouquet {
+.bg-bouquet {
   background-color: rgba(170, 132, 163, 1);
 }
-
 .b--bouquet {
   border-color: rgba(170, 132, 163, 1);
 }
 
-.amber {
+.bg-amber {
   background-color: rgba(110, 57, 34, 1);
 }
-
 .b--amber {
   border-color: rgba(110, 57, 34, 1);
 }
 
-.highland {
+.bg-highland {
   background-color: rgba(117, 149, 84, 1);
 }
-
 .b--highland {
   border-color: rgba(117, 149, 84, 1);
 }

@@ -28,7 +28,7 @@ class Auth extends Component {
             <input id='pass' className='pa3 br2 input-reset ba bg-white' type='password' onKeyPress={this.handleKeyPress} />
           </div>
         </fieldset>
-        <input className='b ph4 pv3 input-reset ba amber white grow pointer f6 dib br2 b--white pointer' type='submit' value="Sign In" onClick={this.handleClick} />
+        <input className='b ph4 pv3 input-reset ba bg-amber white grow pointer f6 dib br2 b--white pointer' type='submit' value="Sign In" onClick={this.handleClick} />
       </div>
     )
   }

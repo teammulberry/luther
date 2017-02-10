@@ -71,7 +71,7 @@ class Bible extends Component {
       }
       if (source.getElementsByTagName('li').length <= 0) {
         let success = document.createElement('h2')
-        success.setAttribute('class', 'amber white pv3 ph4 dib br2')
+        success.setAttribute('class', 'bg-amber white pv3 ph4 dib br2')
         success.innerHTML = 'Great job!'
         document.getElementById('success').appendChild(success)
       }
@@ -97,7 +97,7 @@ class Bible extends Component {
             )}
           </ul>
         </div>
-        <CloseButton color='amber' />
+        <CloseButton color='bg-amber' />
       </div>
     )
   }

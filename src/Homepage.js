@@ -8,28 +8,28 @@ class Homepage extends Component {
         <div className='fl w-100 w-50-ns pa2 grow'>
           <Link
             to='/luther-learned/'
-            className='neptune db w-100 pv3 br2 f4 white no-underline'>
+            className='bg-neptune db w-100 pv3 br2 f4 white no-underline'>
             Luther Learned
           </Link>
         </div>
         <div className='fl w-100 w-50-ns pa2 grow'>
           <Link
             to='/blessings-luther-and-me/'
-            className='bouquet db w-100 pv3 br2 f4 white no-underline'>
+            className='bg-bouquet db w-100 pv3 br2 f4 white no-underline'>
             Blessings: Luther & Me
           </Link>
         </div>
         <div className='fl w-100 w-50-ns pa2 grow'>
           <Link
             to='/what-does-the-bible-say/'
-            className='amber db w-100 pv3 br2 f4 white no-underline'>
+            className='bg-amber db w-100 pv3 br2 f4 white no-underline'>
             What does the Bible say?
           </Link>
         </div>
         <div className='fl w-100 w-50-ns pa2 grow'>
           <Link
             to='/luther-and-lutherans/'
-            className='highland db w-100 pv3 br2 f4 white no-underline'>
+            className='bg-highland db w-100 pv3 br2 f4 white no-underline'>
             Luther & Lutherans
           </Link>
         </div>
